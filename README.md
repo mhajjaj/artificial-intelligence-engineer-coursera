@@ -10,7 +10,8 @@ artificial-intelligence-engineer-coursera/
 ├── .gitignore
 └── advanced-deep-learning-with-pytorch/
     ├── 5 2 2bad_inshilization_logistic_regression_with_mean_square_error_v2.ipynb
-    └── 5 3_cross_entropy_logistic_regression_v2.ipynb
+    ├── 5 3_cross_entropy_logistic_regression_v2.ipynb
+    └── 5 4softmax_in_one_dimension_v2.ipynb
 ```
 
 ## 📓 Notebooks
@@ -21,12 +22,14 @@ artificial-intelligence-engineer-coursera/
 |----------|-------|-------------|
 | [Bad Initialization — Logistic Regression with MSE](advanced-deep-learning-with-pytorch/5%202%202bad_inshilization_logistic_regression_with_mean_square_error_v2.ipynb) | Logistic Regression & Bad Initialization | Demonstrates how poor weight initialization (w=-5, b=-10) combined with Mean Square Error loss leads to suboptimal convergence — achieving only ~60% accuracy on a binary classification task. |
 | [Cross Entropy — Logistic Regression](advanced-deep-learning-with-pytorch/5%203_cross_entropy_logistic_regression_v2.ipynb) | Logistic Regression & Cross-Entropy Loss | Shows how using Cross-Entropy loss instead of MSE enables convergence even with the same bad initialization values (w=-5, b=-10), achieving 100% accuracy. Highlights the importance of choosing the right loss function. |
+| [Softmax Classifier in 1D](advanced-deep-learning-with-pytorch/5%204softmax_in_one_dimension_v2.ipynb) | Softmax Classifier | Builds a Softmax classifier using PyTorch's Sequential module to classify three linearly separable classes in one dimension. Demonstrates multi-class classification with CrossEntropyLoss and probability interpretation via Softmax. |
 
 ### Key Takeaways
 
 - **Initialization matters**: Bad initial weight values can cause gradient descent to get stuck in suboptimal regions.
 - **Loss function selection matters**: Cross-Entropy loss is better suited for classification problems than MSE, as it produces larger gradients for misclassified samples, helping the model escape poor initialization.
-- Both notebooks use the same dataset and model architecture, making the comparison between MSE and Cross-Entropy loss direct and clear.
+- **Softmax for multi-class classification**: The Softmax function converts model outputs into probabilities that sum to 1, making it ideal for multi-class problems.
+- The first two notebooks use the same dataset and model architecture, making the comparison between MSE and Cross-Entropy loss direct and clear.
 
 ## 🛠️ Requirements
 
