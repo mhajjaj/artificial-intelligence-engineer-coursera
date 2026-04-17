@@ -40,6 +40,7 @@ The notebooks use the following Python libraries:
 
 - **Python** 3.12+
 - **PyTorch** 2.8.0 (CPU)
+- **torchvision** 0.23.0 (for MNIST dataset loading and image transforms)
 - **NumPy**
 - **Matplotlib** (including `mpl_toolkits.mplot3d` for 3D surface plots)
 
