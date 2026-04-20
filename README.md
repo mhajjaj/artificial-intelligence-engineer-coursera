@@ -14,7 +14,10 @@ artificial-intelligence-engineer-coursera/
     ├── 5 4softmax_in_one_dimension_v2.ipynb
     ├── 6 2lab_predicting _MNIST_using_Softmax_v2.ipynb
     ├── 7 1_simple1hiddenlayer.ipynb
-    └── 7 2multiple_neurons.ipynb
+    ├── 7 2multiple_neurons.ipynb
+    ├── 7 3xor_v2.ipynb
+    ├── 7 4one_layer_neural_network_MNIST.ipynb
+    └── 7 5 1activationfuction_v2.ipynb
 ```
 
 ## 📓 Notebooks
@@ -29,6 +32,9 @@ artificial-intelligence-engineer-coursera/
 | [Predicting MNIST using Softmax](advanced-deep-learning-with-pytorch/6%202lab_predicting%20_MNIST_using_Softmax_v2.ipynb) | Softmax on MNIST | Applies a single-layer Softmax classifier to the MNIST handwritten digit dataset. Covers data loading with `torchvision`, model training with CrossEntropyLoss, validation accuracy tracking, parameter visualization, and analysis of misclassified vs. correctly classified samples. |
 | [Simple One Hidden Layer](advanced-deep-learning-with-pytorch/7%201_simple1hiddenlayer.ipynb) | Neural Networks | Introduces neural networks with a single hidden layer (2 neurons) to classify non-linearly separable 1D data. Demonstrates how the hidden layer transforms data into a linearly separable space, enabling classification that a simple logistic regression cannot achieve. |
 | [Neural Networks More Hidden Neurons](advanced-deep-learning-with-pytorch/7%202multiple_neurons.ipynb) | Neural Networks | Explores neural networks with multiple hidden neurons (9 neurons) to classify complex non-linearly separable data with two separate regions. Uses BCELoss and Adam optimizer to learn XOR-like patterns in 1D data. |
+| [Noisy XOR](advanced-deep-learning-with-pytorch/7%203xor_v2.ipynb) | Neural Networks | Investigates how many neurons are needed to classify noisy XOR data with one hidden layer. Experiments with 1, 2, and 3 neurons, demonstrating that XOR requires at least 2 neurons in the hidden layer to be solved effectively. |
+| [One Hidden Layer Neural Network on MNIST](advanced-deep-learning-with-pytorch/7%204one_layer_neural_network_MNIST.ipynb) | Neural Networks on MNIST | Applies a neural network with one hidden layer (100 neurons) to classify MNIST handwritten digits. Compares the custom module approach with `nn.Sequential`, showing improved accuracy over single-layer softmax classifiers. |
+| [Activation Functions](advanced-deep-learning-with-pytorch/7%205%201activationfuction_v2.ipynb) | Activation Functions | Compares different activation functions (Sigmoid, Tanh, ReLU) in PyTorch. Demonstrates how to use both module-based (`nn.Sigmoid`, `nn.Tanh`, `nn.ReLU`) and function-based (`torch.sigmoid`, `torch.tanh`, `torch.relu`) approaches. |
 
 ### Key Takeaways
 
