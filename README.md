@@ -44,6 +44,9 @@ artificial-intelligence-engineer-coursera/
 - **Loss function selection matters**: Cross-Entropy loss is better suited for classification problems than MSE, as it produces larger gradients for misclassified samples, helping the model escape poor initialization.
 - **Softmax for multi-class classification**: The Softmax function converts model outputs into probabilities that sum to 1, making it ideal for multi-class problems.
 - **Scaling to real data**: The MNIST notebook demonstrates how the same Softmax + CrossEntropyLoss approach scales from synthetic 1D data to real-world image classification (28x28 grayscale digits, 10 classes).
+- **Hidden layers enable non-linear classification**: Neural networks with hidden layers can classify non-linearly separable data (like XOR) that single-layer models cannot.
+- **Neuron count matters**: The XOR notebook shows that complex patterns require sufficient neurons in the hidden layer — 1 neuron fails, but 2+ neurons succeed.
+- **Activation function choice impacts performance**: ReLU typically converges faster and achieves better accuracy than Sigmoid or Tanh, especially for deeper networks and larger datasets like MNIST.
 - The first two notebooks use the same dataset and model architecture, making the comparison between MSE and Cross-Entropy loss direct and clear.
 
 ## 🛠️ Requirements
