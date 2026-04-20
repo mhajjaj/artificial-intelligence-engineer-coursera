@@ -17,7 +17,8 @@ artificial-intelligence-engineer-coursera/
     ├── 7 2multiple_neurons.ipynb
     ├── 7 3xor_v2.ipynb
     ├── 7 4one_layer_neural_network_MNIST.ipynb
-    └── 7 5 1activationfuction_v2.ipynb
+    ├── 7 5 1activationfuction_v2.ipynb
+    └── 7 5 2mist1layer_v2.ipynb
 ```
 
 ## 📓 Notebooks
@@ -35,6 +36,7 @@ artificial-intelligence-engineer-coursera/
 | [Noisy XOR](advanced-deep-learning-with-pytorch/7%203xor_v2.ipynb) | Neural Networks | Investigates how many neurons are needed to classify noisy XOR data with one hidden layer. Experiments with 1, 2, and 3 neurons, demonstrating that XOR requires at least 2 neurons in the hidden layer to be solved effectively. |
 | [One Hidden Layer Neural Network on MNIST](advanced-deep-learning-with-pytorch/7%204one_layer_neural_network_MNIST.ipynb) | Neural Networks on MNIST | Applies a neural network with one hidden layer (100 neurons) to classify MNIST handwritten digits. Compares the custom module approach with `nn.Sequential`, showing improved accuracy over single-layer softmax classifiers. |
 | [Activation Functions](advanced-deep-learning-with-pytorch/7%205%201activationfuction_v2.ipynb) | Activation Functions | Compares different activation functions (Sigmoid, Tanh, ReLU) in PyTorch. Demonstrates how to use both module-based (`nn.Sigmoid`, `nn.Tanh`, `nn.ReLU`) and function-based (`torch.sigmoid`, `torch.tanh`, `torch.relu`) approaches. |
+| [Testing Activation Functions on MNIST](advanced-deep-learning-with-pytorch/7%205%202mist1layer_v2.ipynb) | Activation Functions on MNIST | Compares the performance of Sigmoid, Tanh, and ReLU activation functions on the MNIST dataset using a neural network with one hidden layer (100 neurons). Demonstrates that ReLU typically converges faster and achieves better accuracy. |
 
 ### Key Takeaways
 
