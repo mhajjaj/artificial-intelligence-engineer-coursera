@@ -32,6 +32,9 @@ artificial-intelligence-engineer-coursera/
     ├── 9 4 1ConvolutionalNeralNetworkSimple example.ipynb
     ├── 9 4 2CNN_Small_Image.ipynb
     ├── 9 4 3CNN_Small_Image_batch.ipynb
+    ├── FashionMNISTProject.ipynb
+    ├── FashionMNISTProject-v1.ipynb
+    ├── Convolutional Neural Network for Anime Image Classification.ipynb
     └── data/
 ```
 
@@ -64,6 +67,8 @@ artificial-intelligence-engineer-coursera/
 | [CNN Simple Example](advanced-deep-learning-with-pytorch/9%204%201ConvolutionalNeralNetworkSimple%20example.ipynb) | CNN Basics | Builds a simple CNN to classify horizontal vs. vertical lines. Covers data preparation, custom model class, training loop, and evaluation for a minimal image classification task. |
 | [CNN with Small Images](advanced-deep-learning-with-pytorch/9%204%202CNN_Small_Image.ipynb) | Image CNN | Constructs a CNN for small image classification. Walks through dataset preparation, model architecture with convolution + pooling layers, training, and validation. |
 | [CNN with Batch Normalization](advanced-deep-learning-with-pytorch/9%204%203CNN_Small_Image_batch.ipynb) | Batch Normalization | Compares a standard CNN against one using Batch Normalization. Demonstrates how batch norm stabilizes training, allows higher learning rates, and improves model accuracy. |
+| [FashionMNIST CNN Project](advanced-deep-learning-with-pytorch/FashionMNISTProject.ipynb) | CNN Project | End-to-end CNN project on FashionMNIST. Covers data transforms, train/val splits, model architecture design (CNN with batch norm), correct linear layer sizing (7*7 after two poolings), training loop, and misclassification analysis. Starter notebook preserved as `-v1`. |
+| [Anime Image CNN](advanced-deep-learning-with-pytorch/Convolutional%20Neural%20Network%20for%20Anime%20Image%20Classification.ipynb) | Image Classification | Transfer learning with a pretrained CNN on ResNet-18 for classifying anime images into multiple types. |
 
 ### Key Takeaways
 
@@ -80,6 +85,8 @@ artificial-intelligence-engineer-coursera/
 - **Convolution extracts spatial features**: 2D convolution with `nn.Conv2d` uses kernels to detect patterns. Stride and padding control output size; $M_{new} = (M + 2 \times padding - K) / stride + 1$.
 - **Pooling reduces dimensionality**: Max pooling preserves dominant features while reducing spatial dimensions, making the model more efficient.
 - **Multi-channel CNNs**: Multiple input/output channels allow networks to learn diverse feature maps. Batch Normalization stabilizes training and improves convergence.
+- **CNN sizing matters**: After two conv+pool layers on 28x28 input, the feature map shrinks to 7x7 (not 4x4). The linear layer must match this flattened size to avoid shape mismatch errors.
+- **Transfer learning**: Pretrained models (ResNet-18) can be fine-tuned on custom image datasets to achieve strong performance with fewer training samples.
 - The first two notebooks use the same dataset and model architecture, making the comparison between MSE and Cross-Entropy loss direct and clear.
 
 ## 🛠️ Requirements
