@@ -1,3 +1,15 @@
 .venv
 data/
 images_dataSAT
+
+# Trained / downloaded model weights (hundreds of MB, over GitHub's 100 MB file limit)
+*.keras
+*.pth
+*.h5
+
+# Dataset archives, notebook-run logs and per-notebook run directories
+*.tar
+.run_*.log
+.lab_runs/
+
+__pycache__/
