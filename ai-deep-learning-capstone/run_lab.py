@@ -76,6 +76,11 @@ def main():
     nb = nbformat.read(args.notebook, as_version=4)
     skip = {i for i, cell in enumerate(nb.cells) if is_install_cell(cell)}
     print(f"skipping install cells: {sorted(skip)}", flush=True)
+    # A skipped cell is not part of this run: drop any output/counter an earlier (IDE) run left
+    # on it, e.g. multi-kilobyte pip logs, so the saved notebook reflects one consistent run.
+    for i in skip:
+        nb.cells[i]["outputs"] = []
+        nb.cells[i]["execution_count"] = None
 
     # Run in a private directory. Every lab's download cell deletes and recreates
     # ./images_dataSAT, so two notebooks sharing one directory (e.g. this run and one started
