@@ -1,10 +1,16 @@
 """Execute a capstone lab notebook headlessly and save it with its outputs.
 
-Usage:  ../.venv/bin/python run_lab.py <notebook.ipynb> [--timeout SECONDS]
+Usage:  .lab_runs/venv/bin/python run_lab.py <notebook.ipynb> [--timeout SECONDS]
 
-The labs begin with `%pip install numpy==1.26 tensorflow==2.19 ...` cells that would
-downgrade the project venv, so those cells (and the cell that inspects their captured
-output) are skipped; every other code cell runs top to bottom in one kernel.
+Run it with the private environment in `.lab_runs/venv` (pinned to the labs' versions:
+numpy 1.26.4, matplotlib 3.9.2, tensorflow 2.19.0, scikit-learn 1.7.0, torch 2.8.0+cpu), not
+the shared project `.venv`: running a lab's `%pip install` cells from an IDE re-pins the shared
+venv on disk, which breaks any kernel that is mid-run (lazy imports then load mismatched
+binaries). The kernel is started from whichever interpreter runs this script.
+
+The labs begin with `%pip install numpy==1.26 tensorflow==2.19 ...` cells; those cells (and
+the cell that inspects their captured output) are skipped; every other code cell runs top to
+bottom in one kernel.
 
 Each notebook executes in its own `.lab_runs/<notebook>/` directory (dataset link, downloaded
 and trained model files land there); only the executed notebook is written back in place.
